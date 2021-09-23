@@ -1,4 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function () {
 function init() {
   let outputDiv = document.querySelector("#output");
   let userName, outputStr;
@@ -28,4 +27,7 @@ function init() {
 }
 
 init();
+
+// document.addEventListener("DOMContentLoaded", function () {
+
 // });
