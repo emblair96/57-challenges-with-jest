@@ -13,7 +13,7 @@
 
 ## Description
 
-The purpose of this repo is to track my progress through the exerciseds found in the book Exercises for Programmers: 57 Challenges to Develop Your Coding Skills by Brian P. Hogan. I am finding ways to continue to strengthen my skillset as a software engineer and specifically focusing on test-driven development (TDD) here, writing tests for each exercise using the Jest framework. Thanks for stopping by!
+The purpose of this repo is to track my progress through the exercises found in the book _Exercises for Programmers: 57 Challenges to Develop Your Coding Skills_ by Brian P. Hogan. I am finding ways to continue to strengthen my skillset as a software engineer and specifically focusing on test-driven development (TDD) here, writing tests for each exercise using the Jest framework. Thanks for stopping by!
 
 <img src="./assets/exercises-for-programmers-book.jpeg" width="250" />
 

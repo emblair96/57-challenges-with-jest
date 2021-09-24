@@ -20,7 +20,7 @@ afterAll(() => {
 });
 
 test("mocking prompt for name & testing functionality", () => {
-  const name = window.prompt("Emily");
+  let name = window.prompt("What is your name?");
   expect(promptSpy).toHaveBeenCalled();
   expect(name).toBeDefined();
 });

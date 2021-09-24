@@ -10,9 +10,9 @@ function init() {
     // return outputStr;
   };
 
-  function appendToPage(string) {
+  function appendToPage(str) {
     let newP = document.createElement("p");
-    newP.textContent = string;
+    newP.textContent = str;
     document.body.append(newP);
   }
 
