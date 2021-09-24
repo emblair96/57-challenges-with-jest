@@ -1,14 +1,13 @@
 function init() {
-  let outputDiv = document.querySelector("#output");
   let userName, outputStr;
 
   const promptForName = () => {
-    userName = window.prompt("What is your name?");
+    return window.prompt("What is your name?");
   };
 
   const strConcat = (name) => {
-    outputStr = `Hello, ${name}, nice to meet you!`;
-    return outputStr;
+    return `Hello, ${name}, nice to meet you!`;
+    // return outputStr;
   };
 
   function appendToPage(string) {
@@ -17,11 +16,9 @@ function init() {
     document.body.append(newP);
   }
 
-  promptForName();
-  strConcat(userName);
+  userName = promptForName();
+  outputStr = strConcat(userName);
   appendToPage(outputStr);
-
-  console.log(userName, "???");
 
   module.exports = { promptForName, strConcat, appendToPage };
 }
