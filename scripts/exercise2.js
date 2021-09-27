@@ -4,7 +4,6 @@ function init() {
   let charCount = document.querySelector("#charCount");
 
   const updateCount = (e) => {
-    console.log("event time!", e);
     if (e.key === "Backspace") {
       count--;
     } else {
@@ -18,8 +17,6 @@ function init() {
       charCount.innerText = "";
       charCount.innerText = count;
     }
-    // let empty = checkLength(inputStr.value.length);
-    // if (empty) count = 0;
   };
 
   const checkLength = (e) => {
@@ -27,29 +24,10 @@ function init() {
     appendCount();
   };
 
-  // const promptForInput = () => {
-  //   return window.prompt("What is the input string?");
-  // };
-
-  // const countChars = (str) => {
-  //   if (str) {
-  //     return str.length;
-  //   }
-
-  //   if (!str) {
-  //     alert("You must enter at least one character.");
-  //   }
-  // };
-
-  // const displayOutput = (str, length) => {
-  //   document.body.innerHTML = `<p>${str} has ${length} characters.</p>`;
-  // };
-
-  // stringInput = promptForInput();
-  // stringLength = countChars(stringInput);
-  // if (stringLength) {
-  //   displayOutput(stringInput, stringLength);
-  // }
+  document.addEventListener("DOMContentLoaded", function () {
+    inputStr.addEventListener("keydown", updateCount);
+    inputStr.addEventListener("keyup", checkLength);
+  });
 
   module.exports = {
     updateCount,
@@ -60,7 +38,3 @@ function init() {
 }
 
 init();
-document.addEventListener("DOMContentLoaded", function () {
-  inputStr.addEventListener("keydown", updateCount);
-  inputStr.addEventListener("keyup", checkLength);
-});
