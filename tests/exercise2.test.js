@@ -1,13 +1,19 @@
 const {
-  promptForInput,
-  countChars,
-  displayOutput,
+  updateCount,
+  appendCount,
+  checkLength,
 } = require("../scripts/exercise2");
 
+var evt = new KeyboardEvent("keydown");
+
 beforeEach(() => {
-  promptSpy = jest.spyOn(window, "prompt");
-  promptSpy.mockImplementation((input) => input);
-  document.body.innerHTML = "";
+  document.body.innerHTML =
+    '<label for="inputStr">What is the input string?</label>' +
+    '<input type="text" id="inputStr" />' +
+    '<h2>Character count: <span id="charCount"></span></h2>';
+  let inputStr = document.querySelector("#inputStr");
+  eventListenerSpy = jest.spyOn(inputStr, "addEventListener");
+  eventListenerSpy.mockImplementation((e, updateCount) => updateCount(evt));
 });
 
 afterEach(() => {
@@ -17,21 +23,13 @@ afterAll(() => {
   jest.clearAllMocks();
 });
 
-test("Test prompt on page load", () => {
-  let str = window.prompt("What is the string input?");
-  expect(promptSpy).toHaveBeenCalled();
-  expect(str).toBeDefined();
+test("Test updating count", () => {
+  let charCount = document.querySelector("#charCount");
+  inputStr.addEventListener("keydown", updateCount);
+  inputStr.dispatchEvent(evt);
+  expect(inputStr.addEventListener).toHaveBeenCalled();
 });
 
-test("String length function", () => {
-  expect(countChars("Hello")).toBe(5);
-  expect(countChars("hello")).toBe(5);
-  expect(countChars("goodbye")).toBe(7);
-});
-
-test("Appending output to the page", () => {
-  let testLength = countChars("hello");
-  displayOutput("hello", testLength);
-
-  expect(document.body.innerHTML).toBe("<p>hello has 5 characters.</p>");
-});
+// test("another test", () => {
+//   expect(count).toBe(1);
+// });
