@@ -7,11 +7,21 @@
     "test": "tests"
   },
   "dependencies": {
+    "@babel/core": "^7.15.5",
     "jest": "^27.2.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.15.4",
+    "@babel/preset-env": "^7.15.6",
+    "babel-jest": "^27.2.3"
+  },
   "scripts": {
     "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
   },
   "keywords": [],
   "author": "",

@@ -7,7 +7,7 @@ const {
 // ! determine how to fix  the window.prompt error
 
 beforeEach(() => {
-  promptSpy = jest.spyOn(window, "prompt");
+  let promptSpy = jest.spyOn(window, "prompt");
   promptSpy.mockImplementation((input) => input);
   document.body.innerHTML = "";
 });
@@ -21,6 +21,8 @@ afterAll(() => {
 
 test("mocking prompt for name & testing functionality", () => {
   let name = window.prompt("What is your name?");
+  let promptSpy = jest.spyOn(window, "prompt");
+
   expect(promptSpy).toHaveBeenCalled();
   expect(name).toBeDefined();
 });
