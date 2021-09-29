@@ -36,16 +36,20 @@ test("Test keydown event listener", () => {
   expect(eventListenerSpy).toHaveBeenCalledWith("keyup", checkLength);
 });
 
-// test("updateCount & checkLength update count variable", () => {
-//   let inputStr = document.querySelector("#inputStr");
+test("updateCount & checkLength update count variable", () => {
+  let countTest = 5;
 
-//   let countTest = 0;
-//   // countTest = updateCount("keydown", countTest);
-//   // expect(countTest).toBe(1);
-//   inputStr.value = "hello";
-//   let inputEvent = new Event("input");
-//   inputStr.dispatchEvent(inputEvent);
+  countTest = updateCount(keydownEvt, countTest);
+  expect(countTest).toBe(6);
+  countTest = checkLength(keyupEvt, countTest);
+  expect(countTest).toBe(0);
+});
 
-//   countTest = checkLength(inputEvent, countTest);
-//   expect(countTest).toBe(3);
-// });
+test("appendCount updates the DOM", () => {
+  let countTest = 4;
+
+  appendCount(countTest);
+  expect(charCount.innerText).toBe(4);
+  countTest = updateCount(keyupEvt, countTest);
+  expect(charCount.innerText).toBe(5);
+});
