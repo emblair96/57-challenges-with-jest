@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1632942461514" clover="3.2.0">
-  <project timestamp="1632942461515" name="All files">
-    <metrics statements="36" coveredstatements="31" conditionals="6" coveredconditionals="3" methods="10" coveredmethods="7" elements="52" coveredelements="41" complexity="0" loc="36" ncloc="36" packages="2" files="4" classes="4"/>
+<coverage generated="1632942788399" clover="3.2.0">
+  <project timestamp="1632942788399" name="All files">
+    <metrics statements="37" coveredstatements="33" conditionals="6" coveredconditionals="4" methods="10" coveredmethods="7" elements="53" coveredelements="44" complexity="0" loc="37" ncloc="37" packages="2" files="4" classes="4"/>
     <package name="scripts">
       <metrics statements="21" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="4"/>
       <file name="example.mjs" path="/Users/emblair96/code/github-repositories/57-challenges-with-jest/scripts/example.mjs">
@@ -36,24 +36,25 @@
       </file>
     </package>
     <package name="utils">
-      <metrics statements="15" coveredstatements="14" conditionals="6" coveredconditionals="3" methods="3" coveredmethods="3"/>
+      <metrics statements="16" coveredstatements="16" conditionals="6" coveredconditionals="4" methods="3" coveredmethods="3"/>
       <file name="utils.mjs" path="/Users/emblair96/code/github-repositories/57-challenges-with-jest/utils/utils.mjs">
-        <metrics statements="15" coveredstatements="14" conditionals="6" coveredconditionals="3" methods="3" coveredmethods="3"/>
+        <metrics statements="16" coveredstatements="16" conditionals="6" coveredconditionals="4" methods="3" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
-        <line num="2" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="6" type="cond" truecount="1" falsecount="1"/>
-        <line num="14" count="6" type="stmt"/>
-        <line num="15" count="6" type="stmt"/>
-        <line num="16" count="6" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="21" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="22" count="2" type="stmt"/>
-        <line num="24" count="2" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="7" type="cond" truecount="1" falsecount="1"/>
+        <line num="15" count="7" type="stmt"/>
+        <line num="16" count="7" type="stmt"/>
+        <line num="17" count="7" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
       </file>
     </package>
   </project>

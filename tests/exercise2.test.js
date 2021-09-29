@@ -4,7 +4,8 @@ const {
   checkLength,
 } = require("../scripts/exercise2.mjs");
 
-var keydownEvt = new KeyboardEvent("keydown", { keycode: 65 });
+var keydownEvt = new KeyboardEvent("keydown");
+var backspaceKeydownEvt = new KeyboardEvent("keydown", { key: "Backspace" });
 var keyupEvt = new KeyboardEvent("keyup");
 
 beforeEach(() => {
@@ -41,6 +42,8 @@ test("updateCount & checkLength update count variable", () => {
 
   countTest = updateCount(keydownEvt, countTest);
   expect(countTest).toBe(6);
+  countTest = updateCount(backspaceKeydownEvt, countTest);
+  expect(countTest).toBe(5);
   countTest = checkLength(keyupEvt, countTest);
   expect(countTest).toBe(0);
 });

@@ -6,6 +6,7 @@ function init() {
   };
 
   const strConcat = (name) => {
+    if (!name) return "Please enter your name when prompted.";
     return `Hello, ${name}, nice to meet you!`;
     // return outputStr;
   };
@@ -24,7 +25,3 @@ function init() {
 }
 
 init();
-
-// document.addEventListener("DOMContentLoaded", function () {
-
-// });
