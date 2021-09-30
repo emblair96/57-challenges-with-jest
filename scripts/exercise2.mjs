@@ -1,7 +1,10 @@
-import { exercise2 } from "./example.mjs";
-import { updateCount, appendCount, checkLength } from "../utils/utils.mjs";
+import {
+  updateCount,
+  appendCount,
+  checkLength,
+} from "../utils/exercise2-utils.mjs";
 
-let count = exercise2.countVar;
+let count = 0;
 let inputStr = document.querySelector("#inputStr");
 
 document.addEventListener("DOMContentLoaded", function () {
